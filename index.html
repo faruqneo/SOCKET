@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>chat room</title>
+</head>
+<style>
+  .outer{
+    width: 900px;
+    margin: auto;
+  }
+
+  .room{
+    width: 400px;
+    margin: 5px;
+    float: left;
+  }
+
+  .messages{
+    width: 390px;
+    margin: 5px;
+    height: 300px;
+    background-color: aquamarine;
+
+  }
+
+  .txt-send{
+    width: 300px;
+    margin: 5px;
+  }
+
+  
+</style>
+<body>
+    <div class="outer">
+
+      <div class="room">
+        <h1>Node</h1>
+        <div class="messages" id="nMessage">
+        </div>
+        <form class="element">
+            <input type="text" name="" id="nTxt" class="txt-send">
+            <input type="button" value="send" id="nBtn" class="btn">
+          </form>
+      </div>
+
+      <div class="room">
+        <h1>Python</h1>
+        <div class="messages" id="pMessage">
+        </div>
+        <form>
+            <input type="text" name="" id="pTxt" class="txt-send">
+            <input type="button" value="send" id="pBtn" class="btn">
+          </form>
+      </div>
+
+    </div>
+</body>
+</html>

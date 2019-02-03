@@ -1,0 +1,23 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faruqneo/SOCKET.git"
+  },
+  "author": "faruq khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faruqneo/SOCKET/issues"
+  },
+  "homepage": "https://github.com/faruqneo/SOCKET#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
