@@ -1,21 +1,24 @@
-const express = require('express')
-const path = require('path')
-const socketIO = require('socket.io')
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
-//Init app
-const app = express()
-
-//Set index page
-app.get('/',function(req, res){
-    res.sendFile(path.join(__dirname,'/index.html'));
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html');
 });
 
-//check socket is connected
-io.on('connect', function(socket){
-    console.log('connected');
-});
+// io.on('connection', function(socket){
+//     console.log('a user connected');
+//     socket.on('disconnect', function(){
+//       console.log('user disconnected');
+//     });
+//   });
 
-//Listen port in 3000
-app.listen(3000, function(req, res){
-    console.log('server is running');
+io.on('connection', function(socket){
+    socket.on('chat message', function(msg){
+        io.emit('chat message', msg);
+    });
+  });
+
+http.listen(3000, function(){
+  console.log('listening on *:3000');
 });
